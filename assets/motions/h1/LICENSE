@@ -1,0 +1,11 @@
+The motions `walk1_subject1.csv` in this directory are from Unitree's LAFAN1 Retargeting
+Dataset (https://huggingface.co/datasets/unitreerobotics/LAFAN1_Retargeting_Dataset),
+Unitree Robotics' retargeting of the Ubisoft La Forge Animation Dataset ("LAFAN1",
+https://github.com/ubisoft/ubisoft-laforge-animation-dataset), (c) 2018 Ubisoft Entertainment.
+
+They are licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
+International Public License: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+
+They are redistributed unmodified, for non-commercial use only, and provided as-is, without
+warranties of any kind (Section 5 of the licence). Motions retargeted from them are adapted
+material: keep them to your own non-commercial use and do not redistribute them.

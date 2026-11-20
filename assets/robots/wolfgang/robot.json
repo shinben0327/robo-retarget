@@ -1,0 +1,51 @@
+{
+  "name": "Hamburg Bit-Bots Wolfgang-OP (20 DoF)",
+  "mjcf": "wolfgang.xml",
+  "source": "bit-bots/wolfgang_robot wolfgang_description/urdf/robot.urdf (b067cae), converted with tools/urdf_to_mjcf.py, MIT",
+  "notes": "Kid-size robot (~0.8 m) from the RoboCup Humanoid League, an OP-style robot with MX-106/XH-540 servos. Zero pose already has the upper arms down (shoulder roll at its limit) and the forearms forward. No shoulder yaw and no wrist; 'r_wrist' is a fixed frame at the end of the forearm. At zero the knees are hyperextended (the shank tilts 15 deg forward, so the robot leans back on toes-up feet); the rest pose bends them ~16 deg, with ~1.4 deg of hip pitch, for straight vertical legs, which also levels the soles.",
+  "has_wrist": false,
+  "head_actuated": true,
+  "rest": {"LHipPitch": 0.0258, "LKnee": 0.2876, "RHipPitch": -0.0232, "RKnee": -0.285},
+  "keypoints": {
+    "pelvis": "base_link",
+    "torso": "torso",
+    "head": "head",
+    "left_hip": "l_hip_2",
+    "left_knee": "l_lower_leg",
+    "left_foot": "l_foot",
+    "right_hip": "r_hip_2",
+    "right_knee": "r_lower_leg",
+    "right_foot": "r_foot",
+    "left_upper_arm": "l_upper_arm",
+    "left_forearm": "l_lower_arm",
+    "left_hand": "l_wrist",
+    "right_upper_arm": "r_upper_arm",
+    "right_forearm": "r_lower_arm",
+    "right_hand": "r_wrist"
+  },
+  "csv": {
+    "fps": 50,
+    "joints": [
+      "HeadPan",
+      "HeadTilt",
+      "LShoulderPitch",
+      "LShoulderRoll",
+      "LElbow",
+      "RShoulderPitch",
+      "RShoulderRoll",
+      "RElbow",
+      "LHipYaw",
+      "LHipRoll",
+      "LHipPitch",
+      "LKnee",
+      "LAnklePitch",
+      "LAnkleRoll",
+      "RHipYaw",
+      "RHipRoll",
+      "RHipPitch",
+      "RKnee",
+      "RAnklePitch",
+      "RAnkleRoll"
+    ]
+  }
+}

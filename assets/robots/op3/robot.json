@@ -1,0 +1,60 @@
+{
+  "name": "ROBOTIS OP3 (20 DoF)",
+  "mjcf": "op3.xml",
+  "source": "mujoco_menagerie robotis_op3/op3.xml (370c439) + hand tips, Apache-2.0",
+  "notes": "Kid-size robot (~51 cm); OP3-derived platforms are common in the RoboCup Humanoid Soccer League Kid-Size division. Zero pose is a T-pose. The shoulder-roll and elbow axes are parallel, so upper arm and forearm always lie in a plane containing the left-right axis: 'upper arm down, forearm forward' is unreachable. The rest has the arms straight down instead, and the forearm and hand are approximate keypoints. The menagerie MJCF declares no joint limits.",
+  "has_wrist": false,
+  "head_actuated": true,
+  "rest": {
+    "l_sho_roll": 1.5708,
+    "r_sho_roll": -1.5708
+  },
+  "approximate_keypoints": [
+    "left_forearm",
+    "left_hand",
+    "right_forearm",
+    "right_hand"
+  ],
+  "keypoints": {
+    "pelvis": "body_link",
+    "torso": "body_link",
+    "head": "head_tilt_link",
+    "left_hip": "l_hip_roll_link",
+    "left_knee": "l_knee_link",
+    "left_foot": "l_ank_roll_link",
+    "right_hip": "r_hip_roll_link",
+    "right_knee": "r_knee_link",
+    "right_foot": "r_ank_roll_link",
+    "left_upper_arm": "l_sho_roll_link",
+    "left_forearm": "l_el_link",
+    "left_hand": "left_hand_tip",
+    "right_upper_arm": "r_sho_roll_link",
+    "right_forearm": "r_el_link",
+    "right_hand": "right_hand_tip"
+  },
+  "csv": {
+    "fps": 30,
+    "joints": [
+      "head_pan",
+      "head_tilt",
+      "l_sho_pitch",
+      "l_sho_roll",
+      "l_el",
+      "r_sho_pitch",
+      "r_sho_roll",
+      "r_el",
+      "l_hip_yaw",
+      "l_hip_roll",
+      "l_hip_pitch",
+      "l_knee",
+      "l_ank_pitch",
+      "l_ank_roll",
+      "r_hip_yaw",
+      "r_hip_roll",
+      "r_hip_pitch",
+      "r_knee",
+      "r_ank_pitch",
+      "r_ank_roll"
+    ]
+  }
+}

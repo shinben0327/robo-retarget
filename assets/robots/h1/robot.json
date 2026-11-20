@@ -1,0 +1,50 @@
+{
+  "name": "Unitree H1 (19 DoF)",
+  "mjcf": "h1.xml",
+  "source": "mujoco_menagerie unitree_h1/h1.xml (370c439) + hand tips, BSD-3",
+  "notes": "Adult-size robot (~1.8 m). Zero pose already has upper arms down and forearms forward, like G1. No wrist, one ankle pitch joint per leg (no ankle roll), no head joint; the arms end at the elbow link, so the hand keypoint is a tip body 0.29 m along the forearm.",
+  "has_wrist": false,
+  "head_actuated": false,
+  "rest": {},
+  "keypoints": {
+    "pelvis": "pelvis",
+    "torso": "torso_link",
+    "head": "torso_link",
+    "left_hip": "left_hip_roll_link",
+    "left_knee": "left_knee_link",
+    "left_foot": "left_ankle_link",
+    "right_hip": "right_hip_roll_link",
+    "right_knee": "right_knee_link",
+    "right_foot": "right_ankle_link",
+    "left_upper_arm": "left_shoulder_yaw_link",
+    "left_forearm": "left_elbow_link",
+    "left_hand": "left_hand_tip",
+    "right_upper_arm": "right_shoulder_yaw_link",
+    "right_forearm": "right_elbow_link",
+    "right_hand": "right_hand_tip"
+  },
+  "csv": {
+    "fps": 30,
+    "joints": [
+      "left_hip_yaw",
+      "left_hip_roll",
+      "left_hip_pitch",
+      "left_knee",
+      "left_ankle",
+      "right_hip_yaw",
+      "right_hip_roll",
+      "right_hip_pitch",
+      "right_knee",
+      "right_ankle",
+      "torso",
+      "left_shoulder_pitch",
+      "left_shoulder_roll",
+      "left_shoulder_yaw",
+      "left_elbow",
+      "right_shoulder_pitch",
+      "right_shoulder_roll",
+      "right_shoulder_yaw",
+      "right_elbow"
+    ]
+  }
+}

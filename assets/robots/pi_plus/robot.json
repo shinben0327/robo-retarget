@@ -1,0 +1,58 @@
+{
+  "name": "HighTorque Pi+ (22 DoF)",
+  "mjcf": "pi_plus.xml",
+  "source": "Hamburg Bit-Bots bitbots_main bitbots_mujoco_sim/xml/pi_plus.xml (3b9f0c9) + hand tips, meshes decimated to 30k faces, MIT",
+  "notes": "Kid-size robot (~0.7 m), used by the Hamburg Bit-Bots in the RoboCup Humanoid Soccer League. The shoulder joints have ref=+-pi/2, so qpos0 has the arms hanging straight down, but the shoulder-roll range ends at +-1.4: the rest has the upper arms ~10 deg out (at the limit) and the elbows bent forward. 'upper_arm' is shoulder yaw, 'thigh' is hip yaw, 'calf' is the knee. No wrist joint; the hand keypoint is a tip body 9 cm below the wrist link.",
+  "has_wrist": false,
+  "head_actuated": true,
+  "rest": {
+    "l_shoulder_roll_joint": -1.4,
+    "r_shoulder_roll_joint": 1.4,
+    "l_elbow_joint": -1.5708,
+    "r_elbow_joint": 1.5708
+  },
+  "keypoints": {
+    "pelvis": "base_link",
+    "torso": "torso_link",
+    "head": "head_pitch_link",
+    "left_hip": "l_hip_roll_link",
+    "left_knee": "l_calf_link",
+    "left_foot": "l_ankle_roll_link",
+    "right_hip": "r_hip_roll_link",
+    "right_knee": "r_calf_link",
+    "right_foot": "r_ankle_roll_link",
+    "left_upper_arm": "l_upper_arm_link",
+    "left_forearm": "l_elbow_link",
+    "left_hand": "left_hand_tip",
+    "right_upper_arm": "r_upper_arm_link",
+    "right_forearm": "r_elbow_link",
+    "right_hand": "right_hand_tip"
+  },
+  "csv": {
+    "fps": 50,
+    "joints": [
+      "head_yaw_joint",
+      "head_pitch_joint",
+      "l_shoulder_pitch_joint",
+      "l_shoulder_roll_joint",
+      "l_upper_arm_joint",
+      "l_elbow_joint",
+      "r_shoulder_pitch_joint",
+      "r_shoulder_roll_joint",
+      "r_upper_arm_joint",
+      "r_elbow_joint",
+      "l_hip_pitch_joint",
+      "l_hip_roll_joint",
+      "l_thigh_joint",
+      "l_calf_joint",
+      "l_ankle_pitch_joint",
+      "l_ankle_roll_joint",
+      "r_hip_pitch_joint",
+      "r_hip_roll_joint",
+      "r_thigh_joint",
+      "r_calf_joint",
+      "r_ankle_pitch_joint",
+      "r_ankle_roll_joint"
+    ]
+  }
+}

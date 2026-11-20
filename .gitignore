@@ -1,0 +1,23 @@
+# Caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Build artefacts
+build/
+dist/
+*.egg-info/
+
+# Environments / editors
+.venv/
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Outputs
+outputs/
+*.mp4
+MUJOCO_LOG.TXT
+assets/robots/*/.styled_*.xml

@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robo-retarget"
+version = "0.1.0"
+description = "Retarget motions between humanoid robots (Unitree G1, Booster K1/T1/T2, ...)"
+readme = "README.md"
+license = "MIT AND BSD-3-Clause"
+license-files = ["LICENSE", "robo_retarget/gmr/LICENSE", "THIRD_PARTY_NOTICES.md"]
+requires-python = ">=3.10"
+authors = [{ name = "Jihwan Shin", email = "shinben0327@gmail.com" }]
+keywords = ["robotics", "humanoid", "motion-retargeting"]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "mujoco>=3.1",
+    "mink>=0.0.4",     # differential IK on MuJoCo, used by the vendored GMR solver
+    "daqp>=0.5",       # the QP solver GMR asks mink for
+    "tqdm>=4.0",
+    "imageio[ffmpeg]>=2.31",
+    "pillow>=10.0",
+]
+
+[project.scripts]
+robo-retarget = "robo_retarget.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=7.4", "ruff>=0.14"]
+
+[tool.setuptools.packages.find]
+include = ["robo_retarget*"]
+
+# assets/ (robots, sample motions) sits beside the package and is read from the
+# source checkout; it is not packaged.
+[tool.setuptools.package-data]
+robo_retarget = ["gmr/LICENSE", "gmr/README.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+extend-exclude = ["robo_retarget/gmr"]  # vendored, kept close to upstream
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
